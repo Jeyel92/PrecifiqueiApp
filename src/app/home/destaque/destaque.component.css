@@ -9,3 +9,7 @@
   position: relative;
   overflow: hidden;
 }
+
+.home-section {
+  background-image: url("../../../assets/images/sheri-silver-498647-unsplash.jpg")
+}
