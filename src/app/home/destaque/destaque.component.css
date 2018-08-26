@@ -1,15 +1,14 @@
 .home-section {
-  /* background-image: url(../images/head.jpg);
+  padding:100px;
+  background-image: url(../../../assets/images/sheri-silver-498647-unsplash.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  background-color: #ffffff; */
+  background-color: #ffffff;
   width: 100%;
   display: block;
   position: relative;
   overflow: hidden;
 }
 
-.home-section {
-  background-image: url("../../../assets/images/sheri-silver-498647-unsplash.jpg")
-}
+
