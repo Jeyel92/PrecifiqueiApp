@@ -1,0 +1,47 @@
+<section class="container">
+  <div class="row">
+    <p>
+      <i class="fa fa-angle-left"></i> Voltar</p>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <img class="col-12" src="../../../assets/Interface2_03.jpg">
+    </div>
+  </div>
+  <div class="col-10">
+    <div class="row">
+    <div class="col-2" style="background-color:#666666; font-weight: bold">
+      <br><br>
+        &nbsp;R$ 00,00
+      </div>
+      <div class="col-6">
+        <p>
+          Mas atenção! Você deve vender no mínimo 30 unidades a esse preço, para garantir que você consiga pagar todas as contas da
+          empresa, fique no verde e ainda consiga guardar um poquinho por mês para caso ocorra algum imprevisto.
+        </p>
+
+
+
+      </div>
+    </div>
+    <hr>
+  </div>
+  <h3>Como funciona o seu lucro?</h3>
+  <p>Você pode alterar a sua faixa de lucro. Se aumentar o valor de lucro, o preço do seu produto ficará mais caro e assim você
+    poderá ganhar mais ou trabalhar menos. Se você diminuir o valor da faixa de lucro, o seu produto ficará mais barato e
+    você ganhará menos em cada venda.</p>
+
+  <h5>Lucro: {{ range }}%</h5>
+  <div class="row">
+
+    <form class="col-10">
+      <div class="form-group  ">
+
+        <input type="range" class="form-control-range col-12" (change)="range = $event.target.value" [value]="range" id="formControlRange">
+      </div>
+      <p style="float:left">0%</p>
+      <p style="float: right;">100%</p>
+    </form>
+  </div>
+
+</section>
