@@ -1,0 +1,11 @@
+.home-section {
+  /* background-image: url(../images/head.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: #ffffff; */
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}

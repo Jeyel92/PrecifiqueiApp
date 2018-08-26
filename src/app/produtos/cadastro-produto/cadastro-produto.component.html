@@ -1,0 +1,97 @@
+<section class="container" id="inicio">
+  <div class="row">
+
+
+
+    <div class="col-10">
+      <p>
+        <i class="fa fa-angle-right"></i>&nbsp;&nbsp;Legal, já conhecemos um pouco sobre o seu negócio e agora é hora de sabermos as informações sobre
+        o seu produto, para te ajudarmos a decidir quanto cobrar.</p>
+    </div>
+  </div>
+</section>
+<section class="container" id="form">
+  <div class="row">
+    <p>
+      <span class="tit-form">Qual é o nome do produto que você oferece?
+      </span>
+      <br> (Insira apenas 1 por vêz, no final você poderá adiionar mais produtos)</p>
+  </div>
+  <div class="row">
+    <input class="form-control col-4" [(ngModel)]="product.nome" placeholder="Nome do Produto">
+  </div>
+  <br>
+  <div class="row">
+    <p class="tit-form">Você tem algum custo para produzir esse serviço ou produto? </p>
+  </div>
+  <div class="row">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" [checked]="product.isProducer === true" (change)="product.isProducer = $event.target.value"
+        name="inlineRadioOptions" id="inlineRadio2" value="true">
+      <label class="form-check-label" for="inlineRadio2">Sim</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" [checked]="product.isProducer === false" (change)="product.isProducer = $event.target.value"
+        name="inlineRadioOptions" id="inlineRadio1" value="false">
+      <label class="form-check-label" for="inlineRadio1">Não</label>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Nome do Ingrediente</th>
+          <th scope="col">Qtde.</th>
+          <th scope="col">Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ingrediente of product.ingredientes;">
+          <td>
+            <input class="form-control" [(ngModel)]="ingrediente.nome" placeholder="Ingrediente">
+          </td>
+          <td>
+            <input class="form-control" [(ngModel)]="ingrediente.qtd" type="number" placeholder="Quantidade">
+          </td>
+          <td>
+            <input class="form-control" [(ngModel)]="ingrediente.valor" type="number" placeholder="R$ 00,00">
+          </td>
+          <td>x</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><a style="color:#007998" (click)="addIngrediente()">+ Adicionar ingredientes</a></td>
+          <td></td>
+          <td>Total R$ {{total}}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="row">
+    <p class="tit-form">
+      Quanto tempo você precisa para produzir essa receita?
+    </p>
+  </div>
+
+  <div class="row">
+    <input class="form-control  col-4" [(ngModel)]="product.tempo" type="number" placeholder="Tempo">
+  </div>
+  <br>
+  <div class="row">
+    <p class="tit-form">
+      Quantas unidades você consegue fazer com essa receita?
+    </p>
+  </div>
+
+  <div class="row">
+    <input class="form-control  col-4" [(ngModel)]="product.unidades" type="number" placeholder="Unidades">
+  </div>
+  <br>
+  <div class="row">
+    <button type="button" class="btn btn-success">Continunar</button>
+  </div>
+
+
+</section>

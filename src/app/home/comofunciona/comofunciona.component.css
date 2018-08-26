@@ -1,0 +1,18 @@
+#section-como{
+  background-color: #999999;
+  padding-top: 10px;
+}
+#section-como i{
+  font-size:3em;
+}
+/* .como{
+  margin: 0 auto;
+} */
+
+.circ{
+  background-color: #666666;
+  border:1px solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
